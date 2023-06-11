@@ -42,7 +42,6 @@ app.delete('/posts/:id', checkAuth, postCreateValidation, PostController.remove)
 app.post('/comment/:id', checkAuth, PostController.comment);
 app.delete('/comment/:id', checkAuth, PostController.removecomment);
 
-console.log(process.env.PORT);
 app.listen(process.env.PORT || 8000, (err) => {
     if (err) return console.log(err)
     console.log('Server ready...')
